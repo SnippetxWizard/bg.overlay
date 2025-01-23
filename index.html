@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background with Overlay</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .background {
+      position: relative;
+      height: 100vh;
+      background: url('photo-1517134191118-9d595e4c8c2b.avif') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #000; /* Text color */
+      font-family: Arial, sans-serif;
+    }
+
+    .background::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.7); /* White overlay with transparency */
+      z-index: 1;
+    }
+
+    .background h1, .background p {
+      position: relative;
+      z-index: 2; /* Ensures text appears above the overlay */
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <h1>BACKGROUND OVERLAY<br>
+    FOLLOW"SNIPPETWIZARD"</h1>
+
+    
+  </div>
+</body>
+</html>
